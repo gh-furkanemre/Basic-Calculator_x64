@@ -34,26 +34,37 @@ namespace $safeprojectname$ {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ TOPLAMA;
-	private: System::Windows::Forms::Button^ CIKARMA;
-	private: System::Windows::Forms::Button^ BOLME;
+
+	private: System::Windows::Forms::Button^ subtraction;
+	private: System::Windows::Forms::Button^ division;
+
+	protected:
+
+
+
+	private: System::Windows::Forms::Button^ multiplication;
+	private: System::Windows::Forms::Button^ and;
 	protected:
 
 	protected:
 
 
 
-	private: System::Windows::Forms::Button^ CARPMA;
-	private: System::Windows::Forms::Button^ ESITTIR;
+
+
 
 
 	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ SEMBOL;
+	private: System::Windows::Forms::TextBox^ symbol;
 
-	private: System::Windows::Forms::TextBox^ SONUC;
+	private: System::Windows::Forms::TextBox^ window;
+
+
 
 
 	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::Button^ addition;
+	private: System::Windows::Forms::Button^ equal;
 
 
 
@@ -70,80 +81,80 @@ namespace $safeprojectname$ {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->TOPLAMA = (gcnew System::Windows::Forms::Button());
-			this->CIKARMA = (gcnew System::Windows::Forms::Button());
-			this->BOLME = (gcnew System::Windows::Forms::Button());
-			this->CARPMA = (gcnew System::Windows::Forms::Button());
-			this->ESITTIR = (gcnew System::Windows::Forms::Button());
+			this->addition = (gcnew System::Windows::Forms::Button());
+			this->subtraction = (gcnew System::Windows::Forms::Button());
+			this->division = (gcnew System::Windows::Forms::Button());
+			this->multiplication = (gcnew System::Windows::Forms::Button());
+			this->equal = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->SEMBOL = (gcnew System::Windows::Forms::TextBox());
-			this->SONUC = (gcnew System::Windows::Forms::TextBox());
+			this->symbol = (gcnew System::Windows::Forms::TextBox());
+			this->window = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
-			// TOPLAMA
+			// addition
 			// 
-			this->TOPLAMA->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->TOPLAMA->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 62, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->addition->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->addition->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 62, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(162)));
-			this->TOPLAMA->Location = System::Drawing::Point(12, 227);
-			this->TOPLAMA->Name = L"TOPLAMA";
-			this->TOPLAMA->Size = System::Drawing::Size(86, 80);
-			this->TOPLAMA->TabIndex = 1;
-			this->TOPLAMA->Text = L"+";
-			this->TOPLAMA->UseVisualStyleBackColor = true;
-			this->TOPLAMA->Click += gcnew System::EventHandler(this, &MyForm::TOPLAMA_Click);
+			this->addition->Location = System::Drawing::Point(12, 227);
+			this->addition->Name = L"addition";
+			this->addition->Size = System::Drawing::Size(86, 80);
+			this->addition->TabIndex = 1;
+			this->addition->Text = L"+";
+			this->addition->UseVisualStyleBackColor = true;
+			this->addition->Click += gcnew System::EventHandler(this, &MyForm::addition_Click);
 			// 
-			// CIKARMA
+			// subtraction
 			// 
-			this->CIKARMA->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->CIKARMA->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 62, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->subtraction->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->subtraction->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 62, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(162)));
-			this->CIKARMA->Location = System::Drawing::Point(104, 227);
-			this->CIKARMA->Name = L"CIKARMA";
-			this->CIKARMA->Size = System::Drawing::Size(86, 80);
-			this->CIKARMA->TabIndex = 2;
-			this->CIKARMA->Text = L"-";
-			this->CIKARMA->UseVisualStyleBackColor = true;
-			this->CIKARMA->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			this->subtraction->Location = System::Drawing::Point(104, 227);
+			this->subtraction->Name = L"subtraction";
+			this->subtraction->Size = System::Drawing::Size(86, 80);
+			this->subtraction->TabIndex = 2;
+			this->subtraction->Text = L"-";
+			this->subtraction->UseVisualStyleBackColor = true;
+			this->subtraction->Click += gcnew System::EventHandler(this, &MyForm::subtraction_Click);
 			// 
-			// BOLME
+			// division
 			// 
-			this->BOLME->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->BOLME->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 62, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->division->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->division->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 62, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(162)));
-			this->BOLME->Location = System::Drawing::Point(12, 313);
-			this->BOLME->Name = L"BOLME";
-			this->BOLME->Size = System::Drawing::Size(86, 80);
-			this->BOLME->TabIndex = 3;
-			this->BOLME->Text = L"/";
-			this->BOLME->UseVisualStyleBackColor = true;
-			this->BOLME->Click += gcnew System::EventHandler(this, &MyForm::BOLME_Click);
+			this->division->Location = System::Drawing::Point(12, 313);
+			this->division->Name = L"division";
+			this->division->Size = System::Drawing::Size(86, 80);
+			this->division->TabIndex = 3;
+			this->division->Text = L"/";
+			this->division->UseVisualStyleBackColor = true;
+			this->division->Click += gcnew System::EventHandler(this, &MyForm::division_Click);
 			// 
-			// CARPMA
+			// multiplication
 			// 
-			this->CARPMA->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 62, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->multiplication->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 62, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(162)));
-			this->CARPMA->Location = System::Drawing::Point(104, 313);
-			this->CARPMA->Name = L"CARPMA";
-			this->CARPMA->Size = System::Drawing::Size(86, 80);
-			this->CARPMA->TabIndex = 4;
-			this->CARPMA->Text = L"*";
-			this->CARPMA->UseVisualStyleBackColor = true;
-			this->CARPMA->Click += gcnew System::EventHandler(this, &MyForm::CARPMA_Click);
+			this->multiplication->Location = System::Drawing::Point(104, 313);
+			this->multiplication->Name = L"multiplication";
+			this->multiplication->Size = System::Drawing::Size(86, 80);
+			this->multiplication->TabIndex = 4;
+			this->multiplication->Text = L"*";
+			this->multiplication->UseVisualStyleBackColor = true;
+			this->multiplication->Click += gcnew System::EventHandler(this, &MyForm::multiplication_Click);
 			// 
-			// ESITTIR
+			// equal
 			// 
-			this->ESITTIR->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->ESITTIR->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 62, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->equal->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->equal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 62, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(162)));
-			this->ESITTIR->Location = System::Drawing::Point(238, 266);
-			this->ESITTIR->Name = L"ESITTIR";
-			this->ESITTIR->Size = System::Drawing::Size(86, 80);
-			this->ESITTIR->TabIndex = 5;
-			this->ESITTIR->Text = L"=";
-			this->ESITTIR->UseVisualStyleBackColor = true;
-			this->ESITTIR->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
+			this->equal->Location = System::Drawing::Point(238, 266);
+			this->equal->Name = L"equal";
+			this->equal->Size = System::Drawing::Size(86, 80);
+			this->equal->TabIndex = 5;
+			this->equal->Text = L"=";
+			this->equal->UseVisualStyleBackColor = true;
+			this->equal->Click += gcnew System::EventHandler(this, &MyForm::equal_Click);
 			// 
 			// textBox1
 			// 
@@ -158,33 +169,33 @@ namespace $safeprojectname$ {
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
 			// 
-			// SEMBOL
+			// symbol
 			// 
-			this->SEMBOL->BackColor = System::Drawing::SystemColors::Window;
-			this->SEMBOL->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->SEMBOL->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 62, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->symbol->BackColor = System::Drawing::SystemColors::Window;
+			this->symbol->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->symbol->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 62, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(162)));
-			this->SEMBOL->Location = System::Drawing::Point(119, 13);
-			this->SEMBOL->MaxLength = 1;
-			this->SEMBOL->Multiline = true;
-			this->SEMBOL->Name = L"SEMBOL";
-			this->SEMBOL->ReadOnly = true;
-			this->SEMBOL->Size = System::Drawing::Size(100, 100);
-			this->SEMBOL->TabIndex = 7;
-			this->SEMBOL->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->SEMBOL->TextChanged += gcnew System::EventHandler(this, &MyForm::SEMBOL_TextChanged);
+			this->symbol->Location = System::Drawing::Point(119, 13);
+			this->symbol->MaxLength = 1;
+			this->symbol->Multiline = true;
+			this->symbol->Name = L"symbol";
+			this->symbol->ReadOnly = true;
+			this->symbol->Size = System::Drawing::Size(100, 100);
+			this->symbol->TabIndex = 7;
+			this->symbol->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->symbol->TextChanged += gcnew System::EventHandler(this, &MyForm::SEMBOL_TextChanged);
 			// 
-			// SONUC
+			// window
 			// 
-			this->SONUC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->window->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(162)));
-			this->SONUC->Location = System::Drawing::Point(12, 119);
-			this->SONUC->MaxLength = 12;
-			this->SONUC->Multiline = true;
-			this->SONUC->Name = L"SONUC";
-			this->SONUC->Size = System::Drawing::Size(313, 100);
-			this->SONUC->TabIndex = 9;
-			this->SONUC->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->window->Location = System::Drawing::Point(12, 119);
+			this->window->MaxLength = 12;
+			this->window->Multiline = true;
+			this->window->Name = L"window";
+			this->window->Size = System::Drawing::Size(313, 100);
+			this->window->TabIndex = 9;
+			this->window->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// textBox3
 			// 
@@ -207,58 +218,58 @@ namespace $safeprojectname$ {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(336, 401);
 			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->SONUC);
-			this->Controls->Add(this->SEMBOL);
+			this->Controls->Add(this->window);
+			this->Controls->Add(this->symbol);
 			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->ESITTIR);
-			this->Controls->Add(this->CARPMA);
-			this->Controls->Add(this->BOLME);
-			this->Controls->Add(this->CIKARMA);
-			this->Controls->Add(this->TOPLAMA);
+			this->Controls->Add(this->equal);
+			this->Controls->Add(this->multiplication);
+			this->Controls->Add(this->division);
+			this->Controls->Add(this->subtraction);
+			this->Controls->Add(this->addition);
 			this->MaximumSize = System::Drawing::Size(354, 448);
 			this->MinimumSize = System::Drawing::Size(354, 448);
 			this->Name = L"MyForm";
 			this->ShowIcon = false;
-			this->Text = L"Hesap Makinesi";
+			this->Text = L"Basic Calculator";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->SEMBOL->Text = this->CIKARMA->Text;
+	private: System::Void subtraction_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->symbol->Text = this->subtraction->Text;
 	}
-	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (this->SEMBOL->Text == this->TOPLAMA->Text) {
+	private: System::Void equal_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (this->symbol->Text == this->addition->Text) {
 			int result = System::Convert::ToInt64(this->textBox1->Text) + System::Convert::ToInt64(this->textBox3->Text);
-			this->SONUC->Text = (System::Convert::ToString(result));
+			this->window->Text = (System::Convert::ToString(result));
 		}
-		else if (this->SEMBOL->Text == this->CIKARMA->Text) {
+		else if (this->symbol->Text == this->subtraction->Text) {
 			int result = System::Convert::ToInt64(this->textBox1->Text) - System::Convert::ToInt64(this->textBox3->Text);
-			this->SONUC->Text = (System::Convert::ToString(result));
+			this->window->Text = (System::Convert::ToString(result));
 		}
-		else if (this->SEMBOL->Text == this->BOLME->Text) {
+		else if (this->symbol->Text == this->division->Text) {
 			double result = System::Convert::ToDouble(this->textBox1->Text) / System::Convert::ToDouble(this->textBox3->Text);
-			this->SONUC->Text = (System::Convert::ToString(result));
+			this->window->Text = (System::Convert::ToString(result));
 		}
-		else if (this->SEMBOL->Text == this->CARPMA->Text) {
+		else if (this->symbol->Text == this->multiplication->Text) {
 			double result = System::Convert::ToDouble(this->textBox1->Text) * System::Convert::ToDouble(this->textBox3->Text);
-			this->SONUC->Text = (System::Convert::ToString(result));
+			this->window->Text = (System::Convert::ToString(result));
 		}
 		else {
 			WarningException("Sorry, something wrong..");
 		}
 	}
-	private: System::Void TOPLAMA_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->SEMBOL->Text = this->TOPLAMA->Text;
+	private: System::Void addition_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->symbol->Text = this->addition->Text;
 	}
 	private: System::Void SEMBOL_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void BOLME_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->SEMBOL->Text = this->BOLME->Text;
+	private: System::Void division_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->symbol->Text = this->division->Text;
 	}
-	private: System::Void CARPMA_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->SEMBOL->Text = this->CARPMA->Text;
+	private: System::Void multiplication_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->symbol->Text = this->multiplication->Text;
 	}
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		if (System::Text::RegularExpressions::Regex::IsMatch(textBox1->Text, "[^0-9]"))
