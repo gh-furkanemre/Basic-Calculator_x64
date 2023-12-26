@@ -105,6 +105,7 @@ namespace $safeprojectname$ {
 
 
 
+
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -430,6 +431,7 @@ namespace $safeprojectname$ {
 			this->MinimumSize = System::Drawing::Size(420, 630);
 			this->Name = L"MyForm";
 			this->ShowIcon = false;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Basic Calculator";
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -556,19 +558,19 @@ namespace $safeprojectname$ {
 	private: System::Void three_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->window->Text += this->three->Text;
 		if (System::Text::RegularExpressions::Regex::IsMatch(window->Text, "[/]")) {
-			this->button2->Text += this->two->Text;
+			this->button2->Text += this->three->Text;
 		}
 		else if (System::Text::RegularExpressions::Regex::IsMatch(window->Text, "[*]")) {
-			this->button2->Text += this->two->Text;
+			this->button2->Text += this->three->Text;
 		}
 		else if (System::Text::RegularExpressions::Regex::IsMatch(window->Text, "[-]")) {
-			this->button2->Text += this->two->Text;
+			this->button2->Text += this->three->Text;
 		}
 		else if (System::Text::RegularExpressions::Regex::IsMatch(window->Text, "[+]")) {
-			this->button2->Text += this->two->Text;
+			this->button2->Text += this->three->Text;
 		}
 		else {
-			this->button1->Text += this->two->Text;
+			this->button1->Text += this->three->Text;
 		}
 	}
 	private: System::Void four_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -753,7 +755,7 @@ namespace $safeprojectname$ {
 			this->window->Text = (System::Convert::ToString(result));
 		}
 		else {
-			MessageBox::Show("Something wrong..");
+			MessageBox::Show("The calculator is empty", "error", MessageBoxButtons::OK, MessageBoxIcon::Warning);
 			this->window->Clear();
 		}
 	}
